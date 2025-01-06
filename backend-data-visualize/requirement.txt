@@ -1,4 +1,12 @@
-pip install numpy pandas tqdm google-genai Pillow dataclasses ratelimit PyMuPDF python-dotenv streamlit
-
-flask
-python-dotenv
+streamlit==1.41.1
+pymilvus==2.5.0
+google-genai==0.3.0
+Pillow==11.0.0
+PyMuPDF==1.25.1
+tqdm==4.67.1
+python-dotenv==1.0.1
+ratelimit==2.2.1
+pandas==2.2.3
+Flask==3.1.0
+flask-talisman==1.1.0
+Flask-Cors==5.0.0
