@@ -10,21 +10,28 @@
 
 #### Chuẩn bị:
 - Tải và cài đặt **Docker Desktop** trên máy tính.
-
+- Tải và cài đặt **VS Code** trên máy tính.
 ---
 
 #### **Bước 1**:
 - Vào folder **backend-data-visualize**.
 - Import các thư viện cần thiết bằng cách cài đặt các dependencies trong file `requirement.txt` bằng câu lệnh: 
     ```bash
-       pip install -r requirements.txt
+       pip install -r requirement.txt
     ```
 
 ---
 
 #### **Bước 2**:
-- Bật **Docker Desktop** và đảm bảo các container đã chạy.
-- Mở trình duyệt, truy cập địa chỉ **http://localhost:8000**.
+- Bật **Docker Desktop** lên.
+- Bật terminal và di chuyển đến folder Docker trong **backend-data-visualize**
+và nhập tuần tự các câu lệnh sau
+   ```bash
+       docker-compose up restore
+       docker-compose down
+       docker-compose up -d
+    ```
+- Mở **Docker Desktop**, truy cập địa chỉ **http://localhost:8000**.
 - Đăng nhập và kiểm tra xem đã có các collection hay chưa.
 
 ---
@@ -32,6 +39,7 @@
 #### **Bước 3**:
 - Nếu chưa có collection:
   - Tạo collection và import data bằng cách:
+   - Bật **VS Code** lên.
     1. Chạy file `import-multimodel-rag.py` với lệnh:
        ```bash
        streamlit run import-multimodel-rag.py
