@@ -27,12 +27,12 @@
 - Bật terminal và di chuyển đến folder Docker trong **backend-data-visualize**
 và nhập tuần tự các câu lệnh sau
    ```bash
-       docker-compose up restore
+       docker-compose -f docker-compose-backup-restore.yml run restore
        docker-compose down
        docker-compose up -d
     ```
 - Mở **Docker Desktop**, truy cập địa chỉ **http://localhost:8000**.
-- Đăng nhập và kiểm tra xem đã có các collection hay chưa.
+- Đăng nhập và kiểm tra xem đã có các collection hay chưa, nếu chưa có qua **bước 3**, nếu đã có rồi xuống **bước 4**
 
 ---
 
@@ -64,8 +64,8 @@ và nhập tuần tự các câu lệnh sau
 #### **Bước 5**:
 - Sau khi import xong data và chứng chỉ `localhost`:
   - Khởi chạy server backend:
-    1. Vào file `request-api-multimodel` trong folder **backend-data-visualize**.
-    2. Thực hiện khởi chạy.
+    1. Mở VS Code và vào file `request-api-multimodel` trong folder **backend-data-visualize**.
+    2. Thực hiện khởi chạy bằng nút run.
 
 ---
 

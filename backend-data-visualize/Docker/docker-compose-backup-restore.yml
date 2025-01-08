@@ -1,0 +1,27 @@
+version: '3.5'
+
+services:
+  backup:
+    image: busybox:latest
+    volumes:
+      - ./backup:/backup
+      - ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/etcd:/etcd
+      - ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/minio:/minio
+      - ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/milvus:/milvus
+    command: sh -c 'tar -cvf /backup/data-backup.tar /etcd /minio /milvus'
+
+  restore:
+    image: busybox:latest
+    volumes:
+      - ./backup:/backup
+      - ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/etcd:/etcd
+      - ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/minio:/minio
+      - ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/milvus:/milvus
+    command: >
+      sh -c "
+      tar -xvf /backup/data-backup.tar -C /
+      "
+
+networks:
+  default:
+    name: milvus
