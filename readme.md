@@ -72,9 +72,9 @@ và nhập tuần tự các câu lệnh sau
 #### **Bước 6**:
 - Mở một cửa sổ **VS Code** mới.
 - Khởi chạy website:
-  1. Di chuyển đến folder **front-end-data-visualize**:
+  1. Di chuyển đến folder **frontend-data-visualize**:
      ```bash
-     cd front-end-data-visualize
+     cd frontend-data-visualize
      ```
   2. Gõ lệnh:
      ```bash
